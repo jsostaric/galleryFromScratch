@@ -14,7 +14,11 @@ spl_autoload_register(function($class){
     return include $path;
 });
 
+App::bind('config', require 'app/config.php');
 
+App::bind('database', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));
 
 Router::load('app/routes.php')
     ->direct(Request::uri(), Request::method());
