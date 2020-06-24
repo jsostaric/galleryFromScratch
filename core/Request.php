@@ -13,4 +13,14 @@ class Request
     {
         return $_SERVER['REQUEST_METHOD'];
     }
+
+    public static function get($key)
+    {
+        return isset($_GET[$key]) ? $_GET[$key] : '';
+    }
+
+    public static function post($key)
+    {
+        return isset($_POST[$key]) ? $_POST[$key] : '';
+    }
 }

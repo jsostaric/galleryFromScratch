@@ -1,5 +1,18 @@
 <?php include ROOT . 'app/view/partials/head.php' ?>
 
+<?php if (isset($message)): ?>
+  <div>
+    <p class="alert-danger pt-2 pb-2 pl-2"><?php echo $message ?></p>
+  </div>
+<?php endif ?>
+
+<?php if (isset($success)): ?>
+  <div>
+    <p class="alert-success pt-2 pb-2 pl-2"><?php echo $success ?></p>
+  </div>
+<?php endif ?>
+
+
 <form action="/login" method="post">
     <div class="form-group">
     <label for="email">Email address:</label>
