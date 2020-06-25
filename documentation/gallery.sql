@@ -25,7 +25,7 @@ users_id int not null,
 expires datetime
 );
 
-alter table gallery add foreign key(users_id) references users(id) on delete cascade;
+alter table images add foreign key(users_id) references users(id) on delete cascade;
 alter table auth_tokens add foreign key(users_id) references users(id) on delete cascade;
 
 insert into users(username, email, password)
