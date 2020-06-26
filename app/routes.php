@@ -20,3 +20,6 @@ $router->post('delete', 'UsersController@destroy');
 $router->get('private/index', 'GalleryController@index');
 $router->post('private/store', 'GalleryController@store');
 $router->post('private/delete', 'GalleryController@destroy');
+
+//ajax request
+$router->get('imageCount', 'AjaxController@imageCount');
