@@ -14,7 +14,9 @@ $router->get('logout', 'AuthController@logout');
 $router->get('private/myAccount', 'UsersController@show');
 $router->get('private/edit', 'UsersController@edit');
 $router->post('private/update', 'UsersController@update');
-$router->post('destroy', 'UsersController@destroy');
+$router->post('delete', 'UsersController@destroy');
 
 //routes to gallery pages
 $router->get('private/index', 'GalleryController@index');
+$router->post('private/store', 'GalleryController@store');
+$router->post('private/delete', 'GalleryController@destroy');

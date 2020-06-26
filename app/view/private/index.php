@@ -34,6 +34,30 @@
 
 <h2>All Pictures</h2>
 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>User</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($images as $image): ?>
+        <tr>
+            <td><img src="/<?= $image->name ?>" class="image"></td>
+            <td><?=$image->username ?>(<?=$image->email ?>)</td>
+            <td><?php if ($image->uid == Session::getInstance()->getUser()->id):?>
+            <form method="post" action="delete">
+                <input type="hidden" name="imageId" value="<?=$image->id?>">
+                <button>Delete</button>
+            </form>
+                <?php endif ?>
+             </td>
+        </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
 
 
 <?php include ROOT . 'app/view/partials/footer.php' ?>

@@ -32,5 +32,9 @@ insert into users(username, email, password)
                 values('jurica',
                         'jurica@example.com',
                         '$2y$10$tCqsmQI2luZjm2OmhXArG..nXGz3SfXou5undWEpURmm4g7/YWE3O'
+                ),
+                ('John Doe',
+                'John@example.com',
+                '$2y$10$tCqsmQI2luZjm2OmhXArG..nXGz3SfXou5undWEpURmm4g7/YWE3O'
                 ); #password: 123
 

@@ -5,7 +5,7 @@
 <p>User's account</p>
 
 <p><a href="edit" class="btn btn-success">Change Password</a></p>
-<form action="/destroy" method="post">
+<form action="/delete" method="post">
     <button class="btn btn-danger mt-2">Remove Account</button>
 </form>
 
